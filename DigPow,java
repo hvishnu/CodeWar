@@ -4,7 +4,7 @@ public class DigPow {
     static int a=0;
 
         public static long digPow(int n ,int p) {
-//89
+
             long count=0,m=0,digit=0,k=-1,e;
             a = n;
             while (a != 0) {
