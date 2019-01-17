@@ -1,0 +1,51 @@
+package com.codewar;
+
+public class DigPow {
+    static int a=0;
+
+        public static long digPow(int n ,int p) {
+//89
+            long count=0,m=0,digit=0,k=-1,e;
+            a = n;
+            while (a != 0) {
+
+                digit++;
+                a = a / 10;
+                p++;
+            }
+            p--;
+           long q=n;
+            for (int i = digit; i >= 1; i--) {
+                a=n;
+                a = a % 10;
+                m += Math.pow(a, p);
+                n = n / 10;
+                p--;
+            }
+            a=q;
+            while (m >=q) {
+
+                ++count;
+                e=q * count;
+                if (m ==e ) {
+                    k = count;
+                    break;
+                }else if(m<e){
+                    break;
+                }
+
+            }
+            System.out.println(k);
+            return 0;
+        }
+
+        public static void main(String args[]){
+            digPow(500,4);
+
+        }
+
+
+
+    }
+
+
